@@ -6,7 +6,7 @@ pipeline {
             steps {
                     echo 'A pipeline is a group of events or jobs which are interlinked with one another in a sequence. In this scenario the code is compiled, tested and test-results are published in a sequence.'
                 	echo 'Starting to build pipeline to display vowels of a sentence in upper case'
-                	sh 'usr/share/maven/bin/mvn clean compile'
+                	sh '/usr/share/maven/bin/mvn clean compile'
                  
             }
         }
@@ -14,7 +14,7 @@ pipeline {
             steps {
             	
                 	echo 'Compiled the code and no errors were encountered and moved to Testing stage....'
-                	sh 'usr/share/maven/bin/mvn test'
+                	sh '/usr/share/maven/bin/mvn test'
                 
             }
         }
