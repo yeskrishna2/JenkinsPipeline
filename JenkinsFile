@@ -6,7 +6,7 @@ pipeline {
             steps {
                     echo 'A pipeline is a group of events or jobs which are interlinked with one another in a sequence. In this scenario the code is compiled, tested and test-results are published in a sequence.'
                 	echo 'Starting to build pipeline to display vowels of a sentence in upper case'
-                	def 'usr/share/maven' = tool name: 'Apache Maven 3.6.3', type: 'maven'
+                	def 'usr/share/maven/bin/mvn' = tool name: 'Apache Maven 3.6.3', type: 'maven'
                 	sh 'mvn clean compile'
                  
             }
